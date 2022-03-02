@@ -9,6 +9,10 @@ import { RegisterComponent } from './register/register.component';
 import {FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EquipementComponent } from './equipement/equipement.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { CommentComponent } from './comment/comment.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    EquipementComponent,
+    ContactusComponent,
+    CommentComponent,
+    
   ],
   imports: [
     BrowserModule,

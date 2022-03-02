@@ -1,28 +1,43 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-  <a class="navbar-brand" routerLink="home" routerLinkActive="active">LOTFIT</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="false" aria-label="Toggle navigation">
-  
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <div class="collapse navbar-collapse" id="navbarsExample">
-  <ul class="navbar-nav mr-auto">
-  <li class="nav-item">
-  <a class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active">Home</a>
-  </li>
-  <li class="nav-item">
-  <a class="nav-link" *ngIf="loginbtn" routerLink="login" routerLinkActive="active">Login</a>
-  </li>
-  <li class="nav-item">
-  <button type="button" *ngIf="logoutbtn" class="btn btn-block" (click)="logout()">logout</button>
-  </li>
-  <li class="nav-item">
-  <a class="nav-link" *ngIf="loginbtn" routerLink="registration" routerLinkActive="active">Registration</a>
-  </li>
-  <li class="nav-item">
-  <a class="nav-link" *ngIf="logoutbtn" routerLink="dashboard" routerLinkActive="active">Dashboard</a>
-  </li>
-  </ul>
-  </div>
+
+   <nav>
+    <div class="nav-wrapper grey darken-4">
+      <i class="material-icons left">
+        fitness_center
+    </i>
+      <a routerLink="home" routerLinkActive="active" class="brand-logo mylogo">LOTFIT</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li> <a class="nav-link" *ngIf="loginbtn" routerLink="home" routerLinkActive="active"><i class="material-icons left">
+          home</i>Home</a></li>
+        <li >
+        <a class="nav-link" *ngIf="loginbtn" routerLink="login" routerLinkActive="active">Login<i class="material-icons right">
+          login
+          </i></a>
+        </li>
+        <li >
+        <a class="nav-link"  *ngIf="logoutbtn" class="btn btn-block" (click)="logout()">logout<i class="material-icons right">
+          logout
+          </i></a>
+        </li>
+        
+        <li >
+        <a class="nav-link" *ngIf="loginbtn" routerLink="registration" routerLinkActive="active">Registration<i class="material-icons right">
+          group_add
+          </i></a>
+        </li>
+        <li>
+        <a class="nav-link" *ngIf="logoutbtn" routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li>
+          <a class="nav-link" *ngIf="logoutbtn" routerLink="comment" routerLinkActive="active">commentaires</a>
+          </li>
+        </ul>
+
+    </div>
   </nav>
+  
+  
+ 
+
+  
+  
   <router-outlet></router-outlet>
